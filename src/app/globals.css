@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+.legacy-page {
+  display: contents;
+}
+
+.dropDown i.is-rotated {
+  transform: rotate(180deg);
+}
