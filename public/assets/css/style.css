@@ -25537,8 +25537,8 @@ body {
 }
 
 .navbar-light .navbar-brand img {
-    max-width: 200px;
-    min-height: 66px;
+    max-width: 110px;
+    min-height: 36px;
     object-fit: contain;
 }
 

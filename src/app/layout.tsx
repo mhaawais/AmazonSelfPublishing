@@ -4,11 +4,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Amazon Self EBook Publishers",
-    template: "%s | Amazon Self EBook Publishers",
+    default: "Amazon Self Publishing Hub",
+    template: "%s | Amazon Self Publishing Hub",
   },
   description:
     "Professional book writing, editing, publishing, and marketing services.",
+  icons: {
+    icon: "/assets/favicon.jpg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
