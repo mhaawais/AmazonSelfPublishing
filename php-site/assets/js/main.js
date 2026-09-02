@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   var menu = document.querySelector("#navBarMenu");
   var toggle = document.querySelector(".navbar-toggler");
-  var close = document.querySelector(".navbar-close");
+  var close = document.querySelector(".mobile-nav-close");
+  var overlay = document.querySelector(".mobile-nav-overlay");
 
   function setMenu(open) {
     if (!menu) return;
     menu.classList.toggle("show", open);
+    document.body.classList.toggle("menu-open", open);
+    if (overlay) {
+      overlay.classList.toggle("active", open);
+      overlay.setAttribute("aria-hidden", open ? "false" : "true");
+    }
     if (toggle) toggle.setAttribute("aria-expanded", open ? "true" : "false");
   }
 
@@ -14,16 +20,36 @@ document.addEventListener("DOMContentLoaded", function () {
     setMenu(!menu.classList.contains("show"));
   });
   if (close) close.addEventListener("click", function () { setMenu(false); });
+  if (overlay) overlay.addEventListener("click", function () { setMenu(false); });
   if (menu) menu.addEventListener("click", function (event) {
     var target = event.target.closest(".dropDown");
     if (target) {
       event.preventDefault();
       var dropdown = target.parentElement.querySelector(".dropdown-menu");
-      if (dropdown) dropdown.classList.toggle("show");
+      var expanded = dropdown ? !dropdown.classList.contains("show") : false;
+      if (dropdown) dropdown.classList.toggle("show", expanded);
+      target.setAttribute("aria-expanded", expanded ? "true" : "false");
       target.querySelector("i")?.classList.toggle("is-rotated");
       return;
     }
-    if (event.target.closest(".nav-link") && window.innerWidth < 768) setMenu(false);
+    if (event.target.closest(".nav-link") && window.innerWidth < 992) setMenu(false);
+  });
+  if (menu) {
+    var currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+    menu.querySelectorAll("a.nav-link").forEach(function (link) {
+      var linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, "") || "/";
+      var servicesPage = currentPath !== "/" && currentPath.indexOf("-services") !== -1;
+      if (linkPath === currentPath || (servicesPage && linkPath === "/services")) link.classList.add("active");
+    });
+  }
+  document.addEventListener("click", function (event) {
+    if (menu && menu.classList.contains("show") && !event.target.closest(".header-wrapper")) setMenu(false);
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") setMenu(false);
+  });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 992) setMenu(false);
   });
 
   document.querySelectorAll("form[action='/api/contact']").forEach(function (form) {
