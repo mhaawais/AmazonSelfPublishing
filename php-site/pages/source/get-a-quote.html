@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from example.com/get-a-quote.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 05:44:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <title>Home</title>    <base />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Amazon Self Publishing Hub helps you to get self publishing a book service, We provide premium quality publishing for amazon books"/>        
+        <link rel="canonical" href="index-2.html"/>    
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />    
+        <meta name="robots" content="index, follow"/>    
+        <meta property="og:locale" content="en_US" />   
+        <meta property="og:type" content="website" />    
+        <meta property="og:title" content="Best Amazon Book Publishing Services | Amazon Publishing " /> 
+        <meta property="og:description" content="Amazon Self Publishing Hub helps you to get self publishing a book service, We provide premium quality publishing for amazon books" /> 
+        <meta property="og:url" content="index-2.html" />    
+        <meta property="og:site_name" content="Amazon Self Publishing Hub" />
+        <link rel="icon" href="assets/favicon.jpg" type="image/x-icon" />    
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            (function(w,d,t,r,u)
+            {
+                var f,n,i;
+                w[u]=w[u]||[],f=function()
+                {
+                    var o={ti:"187210631", enableAutoSpaTracking: true};
+                    o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")
+                },
+                n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function()
+                {
+                    var s=this.readyState;
+                    s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)
+                },
+                i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
+            })
+            (window,document,"script","../bat.bing.com/bat.js","uetq");
+            
+            
+            
+</script>
+
+
+<!-- Start of  Zendesk Widget script -->
+<script defer id="ze-snippet" src="../static.zdassets.com/ekr/snippet905a.js?key=5bd15d7e-2a5a-4e24-ad3e-a843b8d9cd18"> </script>
+<!-- End of  Zendesk Widget script -->
+
+
+
+</head>
+<body>
+    <input type="hidden" id="user_ip" name="user_ip" value="160.30.105.83" />
+
+    <!-- ===== POPUP OVERLAY ===== -->
+<div id="popupOverlay" class="popup-overlay">
+  <div class="popup-form">
+    <span class="popup-close">&times;</span>
+    <div class="popup-row">
+      <!-- <div class="popup-img">
+        <img src="/assets/img/port6.webp" alt="Popup Image">
+      </div> -->
+      <div class="form_banner">
+        <h2 class="popuph2">Start Now & Get 50% Discount</h2>
+        <form class="" action="#" method="POST"> 
+          <input type="hidden" name="url" value='https://example.com/get-a-quote.php'>
+          <input type="hidden" name="domain" value="example.com">
+          <input type="hidden" name="subject" value="footer Form (example.com)">
+          
+          <!-- Full Name -->
+          <div class="form-group">
+            <input type="text" autocomplete="off" class="form-control san-bor" placeholder="Full Name" name="cn" required>
+          </div>
+          
+          <!-- Email -->
+          <div class="form-group">
+            <input type="email" autocomplete="off" class="form-control san-bor" placeholder="Email" name="em" required>
+          </div>
+          
+          <!-- Phone Number -->
+          <div class="form-group">
+            <input type="tel" class="form-control san-bor" placeholder="Phone Number" name="pn" required>
+          </div>
+          
+          <!-- Message -->
+          <div class="form-group">
+            <textarea class="form-control san-bor" name="msg" placeholder="Message"></textarea>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="form-group">
+            <input class="btn-yellow btn-quote btn-validate" type="submit" id="quoteSubmit" name="send_reserve_req" value="Submit">
+          </div>
+          
+          <!-- Alerts -->
+          <div class="error mt-3 alert alert-danger text-left mb-0" style="display: none"></div>
+          <div class="success mt-3 alert alert-success text-left mb-0" style="display: none"></div>
+          <div class="loader" style="display: none">
+            <img alt="loader" src="loader.gif">
+          </div>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CSS ===== -->
+<style>
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    /* backdrop-filter: blur(10px); */
+  }
+  .popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .popuph2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+  .popup-row {
+      display: flex;
+      gap: 10px;
+  }
+
+  /* .popup-row .popup-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup-row .popup-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+  } */
+  .popup-form .form_banner {
+    margin-top: 0;
+    width: 100%;
+  }
+  .popup-form {
+    background: var(--primary);
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.4s ease;
+  }
+  .popup-overlay.active .popup-form {
+    transform: translateY(0);
+  }
+  .popup-close {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .popup-form .form_banner form [type="submit"] {
+    display: inline-block;
+    vertical-align: middle;
+    background: var(--secondary);
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 3px 20px;
+    border: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: all .3s ease;
+    width: 100%;
+    /*position: absolute;*/
+}
+.popup-form .form_banner form [type="submit"]:hover {
+    background: white;
+    color: var(--primary);
+}
+ 
+@media (max-width: 768px) {
+  .popup-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .popup-img {
+    display: none !important;
+  }
+  .popup-form {
+    margin: 10px;
+   }
+  .popup-form .form_banner {
+    width: 100%;
+  }
+}
+</style>
+
+<!-- ===== JS ===== -->
+
+
+<header class="header-wrapper">
+    <!-- // being top bar -->
+    <!-- // end top bar -->
+    <!-- header -->
+    <div class="site-header">
+        <nav class="navbar   navbar-light navbar navbar-expand-md">
+            <div class="container header-contents">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="site-logo">
+
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/img/logo.jpeg" data-imgurl="/assets/img/logo.jpeg"
+                            alt="Amazon Self Publishing Hub">
+                    </a>
+
+                </div>
+                <!-- end of site-logo -->
+               
+                <div class="site-navigation ml-md-auto" role="navigation">
+                    <ul class="socialMedia">
+                        <li><a href="tel:+12818223165"><i class="icon icon-phone"
+                                    data-imgurl="assets/img/icon-phone.webp"></i>
+                                Call Now  <strong> +1 (281) 822-3165</strong></a></li>
+                        <li><a href="#" class="chatt liveChatt"><i class="icon icon-chat"
+                                    data-imgurl="assets/img/icon-chat.webp"></i>live
+                                &nbsp;<strong>Chat</strong></a></li>
+                    </ul>
+                    <div id="navBarMenu" class="collapse navbar-collapse justify-content-end">
+                        <span class="navbar-close">&times;</span>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button"
+                                     aria-expanded="false">
+                                    Services
+                                </a>
+                                <span class="dropDown"><i class="fa-solid fa-chevron-down"></i></span>
+                                <ul class="dropdown-menu two-columns" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="ghostwriting-services.html">Ghost writing</a></li>
+                                <li><a class="dropdown-item" href="book-editing-services.html">Editing</a></li>
+                                <li><a class="dropdown-item" href="book-publishing-services.html">Publishing</a></li>
+                                <li><a class="dropdown-item" href="proofreading-services.html">Proofreading</a></li>
+                                <li><a class="dropdown-item" href="audio-book-recording-services.html">Audio Book</a></li>
+                                <li><a class="dropdown-item" href="book-promotion-services.html">Book Promotion</a></li>
+                                <li><a class="dropdown-item" href="book-marketing-services.html">Book Marketing</a></li>
+                                <li><a class="dropdown-item" href="formatting-services.html">Formatting</a></li>
+                                <li><a class="dropdown-item" href="ebook-writing-services.html">Ebook writing</a></li>
+                                <li><a class="dropdown-item" href="blog-writing-service.html">Blog writing</a></li>
+                                <li><a class="dropdown-item" href="web-content-writing-service.html">Website Content Writing</a></li>
+                                <li><a class="dropdown-item" href="amazon-book-publishing-services.html">Amazon Book Publishing</a></li>
+                                <li><a class="dropdown-item" href="article-writing-services.html">Article Writing</a></li>
+                                <li><a class="dropdown-item" href="book-trailer-services.html">Book Video Trailer</a></li>
+                                <li><a class="dropdown-item" href="book-cover-design-services.html">Book Cover</a></li>
+                                <li><a class="dropdown-item" href="author-website-design-services.html">Author website</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="case-study.html">Case Studies</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <!-- <li class="nav-item ">
+                                <a class="nav-link" href="testimonials.php">Testimonials</a>
+                            </li> -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="faq.html">Faqs</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end of container -->
+
+        </nav><!-- end of nav -->
+
+    </div>
+</header>
+<!-- end site-header -->
+
+<!-- // being about -->
+
+<section class="about__home_intro position-relative">
+<button onclick="window.history.back();" class="btn btn-primary position-absolute" style="top:20px;right:25px">X</button>
+    <div class="about__intro_text">
+        <h3>Amazon Self Publishing Hub</h3>
+    </div>
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-4 position-relative">
+            <img src="assets/img/transparent.svg" data-imgurl="assets/img/logo.jpeg" alt="amazonpublishingsolutions" style="right: 0;left: 0;max-width: 180px;margin: 0 auto;bottom: inherit;top: -32px;">
+            </div>
+        </div>
+    <div class="row align-items-center vh-100">
+                    <div class="col-md-7 mx-auto">
+                        <h2>We Would Like To Hear From You
+                        </h2>
+                        <form class="" action="#" method="POST">
+                         <input type="hidden" name="url" value='get-a-quote.html'>
+<input type="hidden" name="domain" value="example.com">
+<input type="hidden" name="subject" value="Contact Form (example.com)">
+
+                        <div class="row">
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Full Name" name="cn" required />
+  </div>
+  <div class="col">
+    <input type="email" class="form-control" placeholder="E-mail Address" name="em" required />
+  </div>
+</div>
+<div class="row mt-3">
+    <div class="col">
+    <input type="tel" class="form-control" placeholder="Phone Number" name="pn" required />
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col">
+    <textarea name="msg" class="form-control" placeholder="Additional Comments "></textarea>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col align-items-center justify-content-center d-flex">
+    <input type="submit" name="send_reserve_req" value="Send" class="btn btn-primary col-md-4 mx-auto">
+    </div>
+</div>
+<div class="error mt-3 alert alert-danger text-left mb-0" style="display: none"></div>
+         <div class="success mt-3 alert alert-success text-left mb-0" style="display: none"></div>
+         <div class="loader" style="display: none">
+         <img alt="loader" src="loader.gif">
+        </div>
+        
+                    </form>                    </div>
+                    
+                </div>
+    </div>
+</section>
+
+<style>
+    .about__home_intro img {
+        position: relative !important;
+        max-width: 100px !important;
+        right: 0% !important;
+    }
+</style>
+
+<!-- // being footer-form -->
+<section class="footer2_top">
+    <div class="container">
+        <div class="row">
+          <h2 class="heading wow fadeInLeft">Letâ€™s Get Started with Amazon Self Publishing Hub!</h2>
+            <div class="footer2_top_inner">
+            <form class="" action="#" method="POST"> 
+              <input type="hidden" name="url" value='https://example.com/get-a-quote.php'>
+              <input type="hidden" name="domain" value="example.com">
+              <input type="hidden" name="subject" value="footer Form (example.com)">
+                        
+                <div class="row">
+                  <div class="col-md-6 col-xs-12">
+                    <div class="row">
+                    <div class="col-md-6 col-xs-12 wow fadeInLeft">
+                      <input type="text" autocomplete="off" class="form-control san-bor" placeholder="Full Name" name="cn" required>
+                    </div>
+                    <div class="col-md-6 col-xs-12 wow fadeInUp">
+                      <input type="email" autocomplete="off" class="form-control san-bor" placeholder="Email" name="em" required>
+                    </div>
+
+                    <div class="col-md-12 col-xs-12 ps-0 wow fadeInUp">
+                      <input type="tel" class="form-control san-bor" placeholder="Phone Number" name="pn" required>
+                    </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6 col-xs-12">
+                    <div class="row">
+                    <div class="col-md-9 col-xs-12 wow fadeInRight">
+                      <textarea class="form-control san-bor" name="msg" placeholder="Message" ></textarea>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                      <div class="button wow fadeInRight">
+                        <input class="btn-yellow btn-quote btn-validate" type="submit" id="quoteSubmit" name="send_reserve_req" value="Submit">
+                      </div>
+
+                    </div>
+                    <div class="error mt-3 alert alert-danger text-left mb-0" style="display: none"></div>
+             <div class="success mt-3 alert alert-success text-left mb-0" style="display: none"></div>
+             <div class="loader" style="display: none">
+             <img alt="loader" src="loader.gif">
+            </div>
+                    </div>
+                  </div>
+                </div>
+              </form>                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // end footer-form -->
+<style>
+    .social__footer li{
+        background: none !important;
+    }
+</style>
+<!-- footer -->
+<footer class="site-footer">
+	<div class="container">
+		<div class="row d-block">
+			<div class="footer__grid">
+				<!-- <div class="footer_col_one">
+			<a href="#">	<img src="assets/img/transparent.svg" data-imgurl="assets/img/logowhite.jpg" width="180" height="52" alt="Footer Logo"></a>
+				</div> -->
+				<div class="footer_col_two">
+					<h5>Quick Links</h5>
+					<ul class="menu">
+						<li><a href="index-2.html">Home</a></li>
+                        <li><a href="case-study.html">Case Studies</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="faq.html">Faqs</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer_col_three">
+					<h5>&nbsp;</h5>
+					<ul class="menu">
+					<li><a href="ghostwriting-services.html">Ghost writing</a></li>
+                    <li><a href="book-editing-services.html">Editing</a></li>
+                    <li><a href="book-publishing-services.html">Publishing</a></li>
+                    <li><a href="proofreading-services.html">Proofreading</a></li>
+                    <li><a href="audio-book-recording-services.html">Audio Book</a></li>
+                    <li><a href="book-promotion-services.html">Book Promotion</a></li>
+                    <li><a href="book-marketing-services.html">Book Marketing</a></li>
+                    <li><a href="formatting-services.html">Formatting</a></li>
+                    <li><a href="ebook-writing-services.html">Ebook writing</a></li>
+                    <li><a href="blog-writing-service.html">Blog writing</a></li>
+                    <li><a href="web-content-writing-service.html">Website Content Writing</a></li>
+                    <li><a href="amazon-book-publishing-services.html">Amazon Book Publishing</a></li>
+                    <li><a href="article-writing-services.html">Article Writing</a></li>
+                    <li><a href="book-trailer-services.html">Book Video Trailer</a></li>
+                     <li><a href="book-cover-design-services.html">Book Cover</a></li>
+                     <li><a href="author-website-design-services.html">Author website</a></li>
+					</ul>
+				</div>
+				<div class="footer_col_four">
+					<h5>Contact Us</h5>
+					<ul class="contact_info">
+						<li>
+							<h6>Address:</h6>
+							<h5>21423 Baldovin Way, Tomball, TX 77375-1928</h5>
+						</li>
+						<li>
+							<h6>Email:</h6>
+							<h5><a href="mailto:info@amazonselfpublishinghub.com">info@amazonselfpublishinghub.com</a></h5>
+						</li>
+
+					</ul>
+					<div class="footer_phone"> <a href="tel:+12818223165">
+							<i data-imgurl="assets/img/icon-phone2.png"></i>
+							<h3>+1 (281) 822-3165</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end container -->
+</footer>
+<div class="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<p>Copyright &copy; 2025 Amazon Self Publishing Hub All rights reserved</p>
+			</div>
+			<div class="col-md-6 text-md-right text-center">
+				<ul>
+					<li><a href="terms-and-conditions.html">Terms of Use</a></li>
+					<li><a href="privacy-policy.html">Privacy Policy</a></li>
+				</ul>
+			</div>
+			<div class="col-md-12 mt-2" style="text-align: center;">
+			    <p><span style="text-decoration: underline">Disclaimer:</span> We are self independent company who help authors for publishing and marketing services and we are not affiliated with Amazon.com</p>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- end copyright -->
+  <script src="../ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ <script src="assets/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/js/slick.min.js"></script>
+ <script src="assets/js/app.js"></script>
+ <script src="assets/js/form-submission.js"></script>
+ 
+ 
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const popupOverlay = document.getElementById("popupOverlay");
+      const popupBtns = document.querySelectorAll(".popupBtn");
+      const popupClose = document.querySelector(".popup-close");
+    
+      setTimeout(() => {
+        popupOverlay.classList.add("active");
+      }, 5000);
+    
+      popupBtns.forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.preventDefault();
+          popupOverlay.classList.add("active");
+        });
+      });
+    
+      popupClose.addEventListener("click", () => {
+        popupOverlay.classList.remove("active");
+      });
+    
+      popupOverlay.addEventListener("click", e => {
+        if (e.target === popupOverlay) {
+          popupOverlay.classList.remove("active");
+        }
+      });
+    });
+    
+    
+//   form  
+document.addEventListener("DOMContentLoaded", () => {
+  const phoneInputs = document.querySelectorAll("input[type='tel']");
+
+  phoneInputs.forEach(phoneInput => {
+    // Purane attributes hata do
+    phoneInput.removeAttribute("maxlength");
+    phoneInput.removeAttribute("pattern");
+
+    phoneInput.addEventListener("input", function () {
+      let value = this.value.replace(/\D/g, ""); 
+      if (value.length > 10) value = value.slice(0, 10);
+
+      let formatted = value;
+      if (value.length > 6) {
+        formatted = value.replace(/(\d{3})(\d{3})(\d{1,4})/, "$1-$2-$3");
+      } else if (value.length > 3) {
+        formatted = value.replace(/(\d{3})(\d{1,3})/, "$1-$2");
+      }
+
+      this.value = formatted;
+    });
+  });
+  
+//   liveChat Button
+    const liveChatBtn = document.querySelectorAll('.liveChatt')
+    liveChatBtn.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+        //   LiveChatWidget.call("maximize");
+        if (typeof $zoho !== 'undefined' && typeof $zoho.salesiq !== 'undefined') {
+            $zoho.salesiq.floatwindow.visible('show'); // Opens the chat window
+        } else {
+            console.error("Zoho SalesIQ not initialized.");
+            // Optionally, you can add a fallback or a message to the user
+        }
+        })
+    })
+
+    const navBarBtn = document.querySelector(".navbar-toggler");
+    const navbar = document.querySelector("#navBarMenu");
+    const navbarClose = document.querySelector(".navbar-close");
+
+    navBarBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      navbar.classList.add("show");
+    });
+    navbarClose.addEventListener("click", (e) => {
+      e.preventDefault();
+      navbar.classList.remove("show");
+    });
+    document.addEventListener("click", (e) => {
+    if (
+      navbar.classList.contains("show") && 
+      !navbar.contains(e.target) && 
+      !navBarBtn.contains(e.target) 
+    ) {
+      navbar.classList.remove("show");
+    }
+    });
+
+    const dropDown = document.querySelector("li.nav-item.dropdown span");
+    const dropDownIcon = document.querySelector("li.nav-item.dropdown span i");
+    const dropDownMenu = document.querySelector(".dropdown-menu");
+
+    // Toggle dropdown
+    dropDown.addEventListener("click", (e) => {
+      e.preventDefault();
+      dropDownMenu.classList.toggle("show");
+
+      if (dropDownMenu.classList.contains("show")) {
+        dropDownIcon.style.transform = "rotate(180deg)";
+      } else {
+        dropDownIcon.style.transform = "rotate(0deg)";
+      }
+    });
+
+    // Click outside to close
+    document.addEventListener("click", (e) => {
+      if (
+        dropDownMenu.classList.contains("show") &&
+        !dropDownMenu.contains(e.target) &&
+        !dropDown.contains(e.target)
+      ) {
+        dropDownMenu.classList.remove("show");
+        dropDownIcon.style.transform = "rotate(0deg)";
+      }
+    });
+
+
+  
+});
+
+
+</script>
+ 
+ 
+<!-- Mirrored from example.com/get-a-quote.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 05:44:58 GMT -->
+</html>
+ 
+ 
+
