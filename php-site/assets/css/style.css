@@ -28114,6 +28114,9 @@ input.error {
         border: 1px solid #d7d7d7;
         border-radius: 6px;
         background: #fff;
+        cursor: pointer;
+        touch-action: manipulation;
+        pointer-events: auto;
         z-index: 2002;
     }
 

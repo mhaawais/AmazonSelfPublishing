@@ -1,8 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
+function initializeMobileNavigation() {
   var menu = document.querySelector("#navBarMenu");
   var toggle = document.querySelector(".navbar-toggler");
   var close = document.querySelector(".mobile-nav-close");
   var overlay = document.querySelector(".mobile-nav-overlay");
+
+  if (!menu || !toggle || toggle.dataset.menuReady === "true") return;
+  toggle.dataset.menuReady = "true";
 
   function setMenu(open) {
     if (!menu) return;
@@ -15,10 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (toggle) toggle.setAttribute("aria-expanded", open ? "true" : "false");
   }
 
-  if (toggle) toggle.addEventListener("click", function (event) {
+  function toggleMenu(event) {
     event.preventDefault();
+    if (event.type === "touchend") {
+      toggleMenu.lastTouch = Date.now();
+    } else if (Date.now() - (toggleMenu.lastTouch || 0) < 500) {
+      return;
+    }
     setMenu(!menu.classList.contains("show"));
-  });
+  }
+  toggle.addEventListener("click", toggleMenu);
+  toggle.addEventListener("touchend", toggleMenu, { passive: false });
   if (close) close.addEventListener("click", function () { setMenu(false); });
   if (overlay) overlay.addEventListener("click", function () { setMenu(false); });
   if (menu) menu.addEventListener("click", function (event) {
@@ -29,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var expanded = dropdown ? !dropdown.classList.contains("show") : false;
       if (dropdown) dropdown.classList.toggle("show", expanded);
       target.setAttribute("aria-expanded", expanded ? "true" : "false");
-      target.querySelector("i")?.classList.toggle("is-rotated");
+      var icon = target.querySelector("i");
+      if (icon) icon.classList.toggle("is-rotated", expanded);
       return;
     }
     if (event.target.closest(".nav-link") && window.innerWidth < 992) setMenu(false);
@@ -83,4 +94,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeMobileNavigation);
+} else {
+  initializeMobileNavigation();
+}
