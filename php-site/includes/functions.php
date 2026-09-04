@@ -111,6 +111,9 @@ function normalize_images(string $html): string
                 } else {
                     $tag = preg_replace('/\s(alt=["\'][^"\']*["\'])/i', ' style="display:block!important;width:80px!important;height:80px!important;opacity:1!important;visibility:visible!important;" $1', $tag, 1) ?? $tag;
                 }
+                if (!preg_match('/\sonerror=["\']/i', $tag)) {
+                    $tag = preg_replace('/\s(alt=["\'][^"\']*["\'])/i', ' onerror="this.onerror=null;this.src=\'assets/img/pricing/batch.webp\';" $1', $tag, 1) ?? $tag;
+                }
             }
         }
         return $tag;
