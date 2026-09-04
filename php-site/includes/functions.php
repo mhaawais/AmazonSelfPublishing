@@ -65,6 +65,13 @@ function extract_title(string $source): string
 
 function normalize_links(string $html): string
 {
+    // Convert archived Zopim links to the shared LiveChat trigger at render
+    // time. The old API is not installed by this PHP site.
+    $html = preg_replace(
+        '/href=["\']javascript:\s*\$zopim\.livechat\.window\.show\(\);?["\']/i',
+        'href="#" data-livechat-open',
+        $html
+    ) ?? $html;
     $html = preg_replace_callback('/(href=["\'])([^"\']+?)(["\'])/i', static function (array $match): string {
         $href = $match[2];
         if (preg_match('/^(?:https?:|mailto:|tel:|#|javascript:|\/)/i', $href)) return $match[0];
@@ -96,6 +103,14 @@ function normalize_images(string $html): string
         if (preg_match('/data-imgurl=["\']([^"\']+)["\']/i', $tag, $source)) {
             $src = str_starts_with($source[1], '/') ? $source[1] : '/' . $source[1];
             $tag = preg_replace('/src=["\'][^"\']*["\']/i', 'src="' . $src . '"', $tag) ?? $tag;
+            if (str_contains(strtolower($source[1]), '/pricing/batch.webp')) {
+                $tag = preg_replace('/\sdata-imgurl=["\'][^"\']*["\']/i', '', $tag) ?? $tag;
+                if (preg_match('/\sstyle=["\'][^"\']*["\']/i', $tag)) {
+                    $tag = preg_replace('/\sstyle=["\']([^"\']*)["\']/i', ' style="$1;display:block!important;width:80px!important;height:80px!important;opacity:1!important;visibility:visible!important;"', $tag, 1) ?? $tag;
+                } else {
+                    $tag = preg_replace('/\s(alt=["\'][^"\']*["\'])/i', ' style="display:block!important;width:80px!important;height:80px!important;opacity:1!important;visibility:visible!important;" $1', $tag, 1) ?? $tag;
+                }
+            }
         }
         return $tag;
     }, $html) ?? $html;
@@ -160,7 +175,6 @@ function page_data(string $route): ?array
     $body = preg_replace('/<input[^>]+(?:id|name)=["\']user_ip["\'][^>]*>/i', '', $body) ?? $body;
     $body = preg_replace('/action=["\']#["\']/i', 'action="/api/contact"', $body) ?? $body;
     $body = normalize_images(normalize_links(normalize_asset_repairs($body)));
-
     return [
         'title' => extract_title($source),
         'description' => extract_meta($source, 'description'),

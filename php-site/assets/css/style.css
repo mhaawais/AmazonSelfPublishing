@@ -27259,6 +27259,18 @@ section.case-studies-list.all-section {
     height: 178px;
 }
 
+.pricing .card-body img[alt="batch"] {
+    display: block;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    flex: 0 0 80px;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    z-index: 2;
+}
+
 .inner_hero_form form select,
 .inner_hero_form form input[type=email],
 .inner_hero_form form input[type=password],
@@ -28072,9 +28084,12 @@ input.error {
     }
 
     .site-header .site-logo {
-        flex: 1 1 auto;
+        flex: 0 1 auto;
+        width: min(160px, calc(100vw - 82px));
         min-width: 0;
         margin: 0;
+        position: relative;
+        z-index: 2003;
     }
 
     .site-header .site-logo .navbar-brand {
@@ -28087,9 +28102,12 @@ input.error {
     .site-header .navbar-brand img {
         display: block;
         width: auto;
+        min-width: min(160px, calc(100vw - 82px));
         max-width: 160px;
         min-height: 0;
         max-height: 50px;
+        height: auto;
+        object-fit: contain;
     }
 
     .site-header .site-navigation {
