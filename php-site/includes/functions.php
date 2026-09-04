@@ -176,6 +176,11 @@ function page_data(string $route): ?array
     $body = preg_replace('/<input[^>]+(?:id|name)=["\']user_ip["\'][^>]*>/i', '', $body) ?? $body;
     $body = preg_replace('/action=["\']#["\']/i', 'action="/api/contact"', $body) ?? $body;
     $body = normalize_images(normalize_links(normalize_asset_repairs($body)));
+    $body = str_replace(
+        'Letâ€™s together share your story with the world as our eloquent writers give words to your ideas.',
+        'Let’s together share your story with the world as our eloquent writers give words to your ideas.',
+        $body
+    );
     return [
         'title' => extract_title($source),
         'description' => extract_meta($source, 'description'),
