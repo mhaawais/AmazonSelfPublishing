@@ -27259,8 +27259,14 @@ section.case-studies-list.all-section {
     height: 178px;
 }
 
-.pricing .card-body .card-title {
-    color: #212529;
+.pricing .card .card-title,
+.pricing .card .card-title h1,
+.pricing .card .card-title h2,
+.pricing .card .card-title h3,
+.pricing .card .card-title h4,
+.pricing .card .card-title h5,
+.pricing .card .card-title h6 {
+    color: #212529 !important;
 }
 
 .pricing .card-body img[alt="batch"] {
