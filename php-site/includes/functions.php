@@ -104,6 +104,7 @@ function normalize_images(string $html): string
             $src = str_starts_with($source[1], '/') ? $source[1] : '/' . $source[1];
             $tag = preg_replace('/src=["\'][^"\']*["\']/i', 'src="' . $src . '"', $tag) ?? $tag;
             if (str_contains(strtolower($source[1]), '/pricing/batch.webp')) {
+                $tag = preg_replace('/src=["\'][^"\']*["\']/i', 'src="' . e(asset('img/pricing/batch.webp')) . '"', $tag, 1) ?? $tag;
                 $tag = preg_replace('/\sdata-imgurl=["\'][^"\']*["\']/i', '', $tag) ?? $tag;
                 if (preg_match('/\sstyle=["\'][^"\']*["\']/i', $tag)) {
                     $tag = preg_replace('/\sstyle=["\']([^"\']*)["\']/i', ' style="$1;display:block!important;width:80px!important;height:80px!important;opacity:1!important;visibility:visible!important;"', $tag, 1) ?? $tag;
